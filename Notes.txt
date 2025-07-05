@@ -1,0 +1,195 @@
+1. What is deep learning?
+Deep learning is a subset of machine learning that uses artificial neural networks with many layers to learn complex patterns from large amounts of data.
+
+2. How deep learning has started?
+Deep learning started as an evolution of neural networks, gaining popularity in the 2010s due to increased computing power, large datasets, and improved algorithms.
+
+3. Why everyone is using deep learning?
+Deep learning is widely used because it achieves high accuracy in tasks like image recognition, speech processing, and natural language understanding, often outperforming traditional methods.
+
+4. Difference between ML and DL? (most important)
+Machine Learning (ML) includes algorithms that learn from data, such as decision trees and support vector machines. Deep Learning (DL) is a type of ML that uses multi-layered neural networks to automatically extract features and learn from data.
+
+           Machine Learning:-                                  Deep Learning:-                          
+1. All algo is based on mathematical Principal         All algo is based on Neural Network
+E.g,                                                   E.g.,
+(a). Linear Regression--> Slope of Linear              (a). ANN --> Neural Network
+(b). Decision Tree --> Tree based tech                 (b). CNN --> Neural Network
+(c). naive Bayes --> Probability                       (c). RNN/ RSTM --> Neural Network
+
+2. require hand engineering feature selection          2. Model can automatically identify the important features directly from the data 
+3. Machine Learning Models are white Box model         3. Deep learning models are black box model means we can't justify the model prediction
+   means we can justufy the mnodel prediction
+4. It is mostly used with structured data              4. It is mostly used with all kinds of data
+5. It require less data                                5. It require more and more data.
+
+
+## Deep Learning
+Artificial Neural Network:
+ANN --> Classification and Regression
+       structure --> rows and columns e.g., Table 
+Convolutional Neural Network:
+CNN --> Classification and object detection or anything related to images 
+       Un-structured --> Images/ Videos/ pdf/ Spatial data
+Recurrent Neural Network:
+RNN --> classification adn anything related to text data or time series data   
+       Un- Structured --> Text/ document/ time series data
+Long Short-Term Memory:
+LSTM --> Classification and anything related to text data or time series data 
+       Un- Structured --> Text/ document/ time series data
+
+Encoder-Decoder, autoencoder, GRU, Transformer, attention layer
+
+#Q# Explain Different Types of models in Deep learning and when where and how to use them ??
+
+
+
+
+
+
+
+## DAY 2:-Artificial Neural Network(ANN)--
+
+#Q# Explain Activation funtion linear and non linear and which one is most important and why??
+
+1. What is neuron in DL?
+A neuron in deep learning is a basic unit of a neural network. It receives inputs, processes them (usually by multiplying with weights and adding a bias), and passes the result through an activation function to produce an output.
+
+2. What is activation function?
+An activation function is a mathematical function applied to the output of a neuron. It helps the network learn complex patterns by introducing non-linearity, allowing the model to solve more complicated problems.
+2.1 What is the difference between linear and non-linear activation functions? and why non linear function is important?? 
+- Linear activation functions produce outputs that are directly proportional to the input (like y = x). This means the network can only learn simple relationships.
+- Non-linear activation functions (like ReLU, sigmoid, tanh) allow the network to learn complex patterns by introducing curves and bends in the output.
+- Non-linear functions are important because they enable neural networks to solve complicated problems and model real-world data, which is often not just a straight line.
+2.2 Why we use non linear activated function in Deep learning??
+Non-linear activation functions allow neural networks to learn complex, non-linear relationships in data. Without non-linearity, a neural network would behave like a linear model, regardless of the number of layers, 
+and would not be able to capture intricate patterns or solve complex tasks. Non-linear functions enable the network to approximate any function and solve real-world problems more effectively.
+
+3. Difference between sigmoid and relu activation function:
+- Sigmoid outputs values between 0 and 1, making it useful for probabilities, but it can cause slow learning due to vanishing gradients.
+- ReLU (Rectified Linear Unit) outputs zero for negative values and the input itself for positive values, helping the network learn faster and reducing the vanishing gradient problem.
+
+4. What is bias term in neuron?
+The bias term is a constant added to the input of a neuron before applying the activation function. It helps the model make better predictions by allowing the activation function to be shifted left or right.
+
+5. How linear regression model becomes logistic regression?
+Linear regression predicts continuous values. By applying a sigmoid activation function to the output of linear regression, the model predicts probabilities between 0 and 1, turning it into logistic regression for classification tasks.
+
+6. Explain Equation of neurons.
+The equation of a neuron is: output = activation(weighted sum of inputs + bias). Mathematically, it is: y = activation(w1*x1 + w2*x2 + ... + wn*xn + b), where w are weights, x are inputs, b is bias, and activation is the activation function.
+
+
+#Q# Neural Network depth concept Understanding to be able to explain it well//
+1. Explain Artificial Neural Network 
+OR 
+Explain Neural Network
+An Artificial Neural Network (ANN) is a computer system inspired by the way the human brain works. It is made up of layers of simple units called neurons. These layers include:
+- Input layer: Takes in the data.
+- Hidden layer(s): Process the data and find patterns.
+- Output layer: Gives the final result or prediction.
+
+- Explain input, output, and Hidden layer
+Input layer: This is where the network receives the raw data (like numbers or images).
+Hidden layer: These layers are in between the input and output. They do the main work of finding patterns and learning from the data.
+Output layer: This layer gives the answer or prediction, like classifying an image or predicting a number.
+
+Q. How do we train a neural network?
+To train a neural network, we use a process involving forward and backward propagation:
+
+1. Forward Propagation:
+    - Input data is passed through the network, layer by layer, from the input layer to the output layer.
+    - Each neuron computes a weighted sum of its inputs, adds a bias, and applies an activation function.
+    - The final output is the network’s prediction.
+
+2. Loss Calculation:
+    - The network’s prediction is compared to the actual target value using a loss function, which measures the error.
+
+3. Backward Propagation:
+    - The error is propagated backward through the network.
+    - Gradients of the loss with respect to each weight and bias are computed using the chain rule.
+    - These gradients indicate how to adjust the weights and biases to reduce the error.
+
+4. Parameter Update:
+    - The weights and biases are updated using an optimization algorithm like gradient descent, moving them in the direction that reduces the loss.
+
+This process is repeated for many iterations (epochs) until the network learns to make accurate predictions.
+
+Q. Forward Propagation and backward Propagation
+Forward Propagation:
+- In forward propagation, data moves from the input layer through the hidden layers to the output layer.
+- Each neuron processes the input, applies weights and bias, and passes the result through an activation function.
+- The final output is the prediction of the network.
+
+Backward Propagation:
+- In backward propagation, the network learns by comparing the prediction to the actual value and calculating the error.
+- The error is sent backward through the network to update the weights and biases using a method called gradient descent.
+- This process helps the network improve its predictions by reducing the error step by step.
+
+
+
+
+## Optimizer:-
+An optimizer is used in deep learning to adjust the parameters of a neural networdk during training, aiming to minimize the difference
+between predicted and actual outputs. It helps the model learn and improve its performance by finding the optimal settings for its parameters
+
+
+Q. - Global minima and Local minima
+- Global minima is the lowest point of the loss function, meaning the best possible solution for the model.
+- Local minima are other low points, but not the lowest. The model can get stuck here and not reach the best solution.
+
+Q. - Weight Updating formula and explanation
+- The weights are updated using: new_weight = old_weight - learning_rate * gradient
+- This means we adjust the weights a little in the direction that reduces the error.
+
+Q. - Stochastic Gradient Descent explanation with formula and diagram.
+- Stochastic Gradient Descent (SGD) updates the weights using one data point at a time, making training faster and allowing the model to escape local minima.
+- Formula: new_weight = old_weight - learning_rate * gradient (calculated for one sample)
+- Diagram: Imagine a ball rolling down a bumpy hill, taking small steps to reach the lowest point. 
+
+
+#Q# Epochs understanding:-
+
+# 📘 Epochs Understanding – Simplified
+
+## What is an Epoch in Machine Learning?
+
+An **epoch** is **one complete pass** through the entire training dataset by the machine learning algorithm.
+
+---
+
+## 🧠 Simple Analogy (Real-Life Example)
+
+Imagine you're trying to **learn a new poem**.  
+- You have the full poem written on a page (your **training data**).
+- You **read the entire poem once** to try to memorize it — that’s **1 epoch**.
+- The next time, you read it **again and try to correct your mistakes** — that’s **epoch 2**.
+- You continue this process multiple times to improve.
+
+So, each **epoch** = one full **reading/practice round** of the poem (dataset).
+
+---
+
+## 💡 Why Multiple Epochs?
+
+- You rarely learn perfectly in just **one go**.
+- Similarly, the model improves its learning and updates its internal weights **every epoch**.
+- Too few epochs = underfitting  
+- Too many epochs = risk of overfitting
+
+---
+
+## 📊 In Training
+
+If you have 1000 rows of training data and use **1 epoch**, the model sees all 1000 once.  
+If you use **10 epochs**, it goes through those same 1000 rows **10 times** to learn better.
+
+---
+
+## Summary
+
+| Term   | Meaning                              |
+|--------|--------------------------------------|
+| Epoch  | 1 full pass through training data    |
+| Iteration | One update step (batch-wise)     |
+| Batch Size | Number of samples per iteration |
+
